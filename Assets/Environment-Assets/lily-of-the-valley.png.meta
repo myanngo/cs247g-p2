@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      lily-of-the-valley_0: 6487296487014697066
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
