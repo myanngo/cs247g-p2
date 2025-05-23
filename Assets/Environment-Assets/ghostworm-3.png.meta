@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ghostworm-3_0: -2453084746502281997
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

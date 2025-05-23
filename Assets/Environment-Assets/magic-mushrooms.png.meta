@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      magic-mushrooms_0: 1019848887229981553
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

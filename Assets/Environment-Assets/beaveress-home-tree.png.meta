@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      beaveress-home-tree_0: -7725108650732823177
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
