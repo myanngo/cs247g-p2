@@ -10942,7 +10942,7 @@ MonoBehaviour:
   dialoguePanel: {fileID: 7995457530260684265}
   dialogueText: {fileID: 4602279154673159521}
   npcNameText: {fileID: 2117529361963471446}
-  continueButton: {fileID: 0}
+  continueButton: {fileID: 6289676109945826483}
 --- !u!4 &469499633
 Transform:
   m_ObjectHideFlags: 0
@@ -39584,6 +39584,11 @@ PrefabInstance:
       propertyPath: 'dialogueLines.Array.data[4]'
       value: "Thank you, sweetie. First, we\u2019ll need some kind of bottle in which
         to make the elixir.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3768904744421713265, guid: 228b7c236ed5e3d478660927dc0582c8,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5825367709963388608, guid: 228b7c236ed5e3d478660927dc0582c8,
         type: 3}

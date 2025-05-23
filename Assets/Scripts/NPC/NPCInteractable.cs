@@ -26,7 +26,7 @@ public class NPCInteractable : MonoBehaviour
         }
         else if (dialogueStage == 1)
         {
-            if (InventoryManager.Instance.CountItem(ItemType.GlassPiece) >= 14)
+            if (InventoryManager.Instance.CountItem(ItemType.GlassPiece) < 14)
             {
                 lines = new List<string>
                 {
