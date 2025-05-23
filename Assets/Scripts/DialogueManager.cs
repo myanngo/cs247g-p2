@@ -12,26 +12,49 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private TMP_Text npcNameText;
+    [SerializeField] private Button continueButton;
+
+    private Queue<string> dialogueLines = new Queue<string>();
 
     private void Awake()
     {
-        // Singleton pattern
         if (Instance == null)
         {
             Instance = this;
-            dialoguePanel.SetActive(false); // Hide by default
+            dialoguePanel.SetActive(false);
         }
         else
         {
             Destroy(gameObject);
         }
+
+        continueButton.onClick.AddListener(DisplayNextLine);
     }
 
-    public void ShowDialogue(string npcName, string dialogue)
+    public void ShowDialogue(string npcName, List<string> lines)
     {
-        npcNameText.text = npcName;
-        dialogueText.text = dialogue;
         dialoguePanel.SetActive(true);
+        npcNameText.text = npcName;
+        dialogueLines.Clear();
+
+        foreach (string line in lines)
+        {
+            dialogueLines.Enqueue(line);
+        }
+
+        DisplayNextLine();
+    }
+
+    public void DisplayNextLine()
+    {
+        if (dialogueLines.Count == 0)
+        {
+            HideDialogue();
+            return;
+        }
+
+        string nextLine = dialogueLines.Dequeue();
+        dialogueText.text = nextLine;
     }
 
     public void HideDialogue()
