@@ -1,13 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
 
     [SerializeField] private GameObject dialoguePanel;
-    [SerializeField] private Text dialogueText;
-    [SerializeField] private Text npcNameText;
+    [SerializeField] private TMP_Text dialogueText;
+    [SerializeField] private TMP_Text npcNameText;
 
     private void Awake()
     {

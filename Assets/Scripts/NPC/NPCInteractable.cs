@@ -10,7 +10,7 @@ public class NPCInteractable : MonoBehaviour
 
     public void Interact()
     {
-        //DialogueManager.Instance.ShowDialogue(npcName, dialogue);
+        DialogueManager.Instance.ShowDialogue(npcName, dialogue);
         Debug.Log($"{npcName}: \"{dialogue}\"");
     }
 }
