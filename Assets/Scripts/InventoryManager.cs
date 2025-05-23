@@ -21,6 +21,20 @@ public class InventoryManager : MonoBehaviour
 
     public bool AddItem(Item item)
     {
+        // check if exists and is in stack
+        for (int i = 0; i < inventorySlots.Length; i++)
+        {
+            InventorySlot slot = inventorySlots[i];
+            InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+            if (itemInSlot != null && itemInSlot.item == item)
+            {
+                itemInSlot.count++;
+                itemInSlot.RefreshCount();
+                return true;
+            }
+        }
+
+        // if none we can just go to the empty one (lol rip performance)
         for (int i = 0; i < inventorySlots.Length; i++)
         {
             InventorySlot slot = inventorySlots[i];
@@ -42,7 +56,6 @@ public class InventoryManager : MonoBehaviour
         inventoryItem.InitializeItem(item);
     }
 
-    // Optional: helper method for checking inventory contents
     public int CountItem(ItemType type)
     {
         int total = 0;
