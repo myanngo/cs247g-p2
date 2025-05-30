@@ -18,3 +18,5 @@ MonoBehaviour:
   range: {x: 5, y: 4}
   stackable: 1
   image: {fileID: 7111969943574635211, guid: 47a5494e9857b43ae83c2c782aaf0ade, type: 3}
+  itemName: Glass Shard
+  description: Shards of a broken elixir bottle, that was broken up into 14 pieces.
