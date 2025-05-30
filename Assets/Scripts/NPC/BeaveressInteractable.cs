@@ -12,6 +12,7 @@ public class BeaveressInteractable : MonoBehaviour
     {
         List<string> lines = new List<string>();
 
+        // INITIAL PHASE
         if (dialogueStage == 0)
         {
             lines = new List<string>
@@ -25,6 +26,7 @@ public class BeaveressInteractable : MonoBehaviour
 
             dialogueStage = 1; // advance to next stage
         }
+        // GLASS PUZZLE FINDING PHASE
         else if (dialogueStage == 1)
         {
             if (InventoryManager.Instance.CountItem(ItemType.GlassPiece) < 14)
@@ -44,7 +46,7 @@ public class BeaveressInteractable : MonoBehaviour
                 };
 
                 dialogueStage = 2;
-                
+
                 // Use FadeManager for scene transition with delay
                 if (FadeManager.Instance != null)
                 {
@@ -57,6 +59,17 @@ public class BeaveressInteractable : MonoBehaviour
                     StartCoroutine(DelayedSceneLoad("PuzzleInterface", sceneTransitionDelay));
                 }
             }
+        }
+        // POST PUZZLE PHASE (GO FILL UP? OTHER INGREDIENTS?)
+        else if (dialogueStage == 2)
+        {
+            lines = new List<string>
+            {
+                "Thank you for your help!",
+                "Now, we’ll need water as a base for our salve. There’s a stream just East of here where my nephew has a dam…",
+            };
+
+            dialogueStage = 3; // advance to next stage
         }
         else
         {
