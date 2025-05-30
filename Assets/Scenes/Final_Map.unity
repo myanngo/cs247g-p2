@@ -94152,6 +94152,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 784912030954625356, guid: 897635d3663ffa0408ea8a47feb46dcc,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2628892263487607573, guid: 897635d3663ffa0408ea8a47feb46dcc,
         type: 3}
       propertyPath: orthographic size
@@ -96194,3 +96199,4 @@ SceneRoots:
   - {fileID: 246810848}
   - {fileID: 706658278}
   - {fileID: 2138024658}
+  - {fileID: 216791544}
