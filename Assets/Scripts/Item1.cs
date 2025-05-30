@@ -17,13 +17,24 @@ public class Item : ScriptableObject
 
     [Header("Both")]
     public Sprite image;
+    
+    [Header("Item Info")]
+    public string itemName;
+    [TextArea(3, 5)]
+    public string description;
 }
 
-public enum ItemType {
+public enum ItemType
+{
     GlassPiece,
-    ElixerIngredient
+    LilyofValley,
+    Flower,
+    Honey,
 }
 
-public enum ActionType {
-    Puzzle
+public enum ActionType
+{
+    Puzzle,
+    ElixerIngredient, // final ingredients
+    Exchange, // for the flower to the bees
 }

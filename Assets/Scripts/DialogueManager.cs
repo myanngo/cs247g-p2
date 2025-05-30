@@ -15,6 +15,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Button continueButton;
 
     private Queue<string> dialogueLines = new Queue<string>();
+    private bool isDialogueActive = false;
+
+    public bool IsDialogueActive => isDialogueActive;
 
     private void Awake()
     {
@@ -33,6 +36,7 @@ public class DialogueManager : MonoBehaviour
 
     public void ShowDialogue(string npcName, List<string> lines)
     {
+        isDialogueActive = true;
         dialoguePanel.SetActive(true);
         npcNameText.text = npcName;
         dialogueLines.Clear();
@@ -59,6 +63,16 @@ public class DialogueManager : MonoBehaviour
 
     public void HideDialogue()
     {
+        isDialogueActive = false;
         dialoguePanel.SetActive(false);
+    }
+
+    // Public method for PlayerInteract to call when E is pressed during dialogue
+    public void HandleDialogueInput()
+    {
+        if (isDialogueActive)
+        {
+            DisplayNextLine();
+        }
     }
 }
