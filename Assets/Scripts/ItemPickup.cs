@@ -14,6 +14,7 @@ public class ItemPickup : MonoBehaviour
             if (inventory != null && inventory.AddItem(itemData))
             {
                 Destroy(gameObject); // Remove the item from the world
+                inventory.TriggerPickupAnimation();
             }
         }
     }

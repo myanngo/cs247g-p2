@@ -10,11 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f902ca6f35e6554890ace1bd7575820, type: 3}
-  m_Name: Glass 10
+  m_Name: FlowerToHoney
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
-  type: 0
-  actionType: 0
+  type: 2
+  actionType: 2
   range: {x: 5, y: 4}
   stackable: 1
-  image: {fileID: 9098515894126526158, guid: 47a5494e9857b43ae83c2c782aaf0ade, type: 3}
+  image: {fileID: -512764756602337721, guid: 460d04e70f85541b8a79e5c5abc0d8ea, type: 3}
+  itemName: Pollen-Rich Flower
+  description: This flower is the most pollen-rich of them all. It can be exchanged
+    for honey!
