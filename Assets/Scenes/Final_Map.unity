@@ -5694,7 +5694,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -125, y: 7.6, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1633814193}
@@ -6069,6 +6069,84 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e07472cd7976c4ae2ae58eb26a88c365, type: 3}
+--- !u!1 &141164389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 141164390}
+  - component: {fileID: 141164391}
+  m_Layer: 0
+  m_Name: Colliders (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &141164390
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141164389}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -142.8, y: 114.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 319000177}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &141164391
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141164389}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 144.48465, y: 13.313843}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 328.7901, y: 7.15036}
+  m_EdgeRadius: 0
 --- !u!1001 &144518125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10164,7 +10242,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -111.3, y: 42.1, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1633814193}
@@ -13068,6 +13146,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 319000177}
     m_Modifications:
+    - target: {fileID: -763435726220448781, guid: eeba58a70168c4b468e43063c5ae90d3,
+        type: 3}
+      propertyPath: defaultLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -763435726220448781, guid: eeba58a70168c4b468e43063c5ae90d3,
+        type: 3}
+      propertyPath: 'defaultLines.Array.data[0]'
+      value: '***BURPPP***'
+      objectReference: {fileID: 0}
     - target: {fileID: 4206178374689072035, guid: eeba58a70168c4b468e43063c5ae90d3,
         type: 3}
       propertyPath: m_Radius
@@ -15120,6 +15208,9 @@ Transform:
   - {fileID: 1301585754}
   - {fileID: 1247236638}
   - {fileID: 567674169}
+  - {fileID: 2025212570}
+  - {fileID: 141164390}
+  - {fileID: 973559083}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &319000179
@@ -16271,7 +16362,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -66, y: 7.208206, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1633814193}
@@ -17725,7 +17816,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.2009811, y: 74.7, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1633814193}
@@ -22928,6 +23019,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58fb19f899a0c48f19f294501b78af57, type: 3}
+--- !u!1 &543880415 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8688743584874083118, guid: 99e7592be3a134fdea9d5cca7a469e0d,
+    type: 3}
+  m_PrefabInstance: {fileID: 826605020}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &545392232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25337,7 +25434,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -47.9, y: 54.8, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1633814193}
@@ -34727,7 +34824,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8688743584874083118, guid: 99e7592be3a134fdea9d5cca7a469e0d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 826605024}
   m_SourcePrefab: {fileID: 100100000, guid: 99e7592be3a134fdea9d5cca7a469e0d, type: 3}
 --- !u!4 &826605021 stripped
 Transform:
@@ -34735,6 +34836,23 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 826605020}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &826605024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543880415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf1384650d0bb544a477c8f64c97cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filledBottleItem: {fileID: 11400000, guid: e5715ab5badb6844bb12edb27d9aea86, type: 2}
+  audioSource: {fileID: 0}
+  fillSound: {fileID: 0}
+  fillEffect: {fileID: 0}
+  springAnimator: {fileID: 0}
 --- !u!1001 &827450525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37437,7 +37555,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -56.2, y: 49, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1633814193}
@@ -41567,6 +41685,84 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 118f63abf62c449f3a496ef415075d76, type: 3}
+--- !u!1 &973559082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 973559083}
+  - component: {fileID: 973559084}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &973559083
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973559082}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 159.40001, y: -88.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 319000177}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &973559084
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973559082}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 2.0245361, y: 2.7607727}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 5.0490723, y: 23.822357}
+  m_EdgeRadius: 0
 --- !u!4 &977018914 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 898797211848371202, guid: 118f63abf62c449f3a496ef415075d76,
@@ -43507,6 +43703,129 @@ PrefabInstance:
         type: 3}
       propertyPath: 'dialogue.Array.data[3]'
       value: Well, go on now. I have to get some beauty sleep.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: defaultLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: 'defaultLines.Array.data[0]'
+      value: "Hello, stranger. Do you like my hat? I\u2019m going for a sort of retro-chic."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: dialogueByStage.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: dialogueByStage.Array.data[0].stage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: dialogueByStage.Array.data[1].stage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: dialogueByStage.Array.data[2].stage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: dialogueByStage.Array.data[3].stage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: dialogueByStage.Array.data[0].lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: dialogueByStage.Array.data[1].lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: dialogueByStage.Array.data[2].lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: dialogueByStage.Array.data[3].lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: 'dialogueByStage.Array.data[0].lines.Array.data[0]'
+      value: My hat? I got it from the north valley of flowers.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: 'dialogueByStage.Array.data[0].lines.Array.data[1]'
+      value: I was trying to find the Lily of the Valley, but found this cute hat
+        instead ;)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: 'dialogueByStage.Array.data[0].lines.Array.data[2]'
+      value: You need the Lily of the Valley? The fireflies will aid you in your
+        search
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: 'dialogueByStage.Array.data[1].lines.Array.data[0]'
+      value: My hat? I got it from the north valley of flowers.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: 'dialogueByStage.Array.data[1].lines.Array.data[1]'
+      value: I was trying to find the Lily of the Valley, but found this cute hat
+        instead ;)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: 'dialogueByStage.Array.data[1].lines.Array.data[2]'
+      value: You need the Lily of the Valley? The fireflies will aid you in your
+        search
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: 'dialogueByStage.Array.data[2].lines.Array.data[0]'
+      value: My hat? I got it from the north valley of flowers.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: 'dialogueByStage.Array.data[2].lines.Array.data[1]'
+      value: I was trying to find the Lily of the Valley, but found this cute hat
+        instead ;)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: 'dialogueByStage.Array.data[2].lines.Array.data[2]'
+      value: You need the Lily of the Valley? The fireflies will aid you in your
+        search
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: 'dialogueByStage.Array.data[3].lines.Array.data[0]'
+      value: My hat? I got it from the north valley of flowers.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: 'dialogueByStage.Array.data[3].lines.Array.data[1]'
+      value: I was trying to find the Lily of the Valley, but found this cute hat
+        instead ;)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
+      propertyPath: 'dialogueByStage.Array.data[3].lines.Array.data[2]'
+      value: You need the Lily of the Valley? The fireflies will aid you in your
+        search
       objectReference: {fileID: 0}
     - target: {fileID: 8507955219570647146, guid: 0139df50e1ae540c38763f9c0f7cace5,
         type: 3}
@@ -47404,6 +47723,84 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4538564904858665093, guid: ee77d2a1ce4174be2bcefcd190a9dcb2,
+        type: 3}
+      propertyPath: defaultLines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538564904858665093, guid: ee77d2a1ce4174be2bcefcd190a9dcb2,
+        type: 3}
+      propertyPath: 'defaultLines.Array.data[0]'
+      value: "The, *ahem,* the CO2 from the burning of fossil fuels has contributed
+        to the collapse of this here ecosystem, but I have been iterating on an invention
+        that I call \u201Ccarbon capture.\u201D It \u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538564904858665093, guid: ee77d2a1ce4174be2bcefcd190a9dcb2,
+        type: 3}
+      propertyPath: 'defaultLines.Array.data[1]'
+      value: "*AHEM* Am I boring you? Don\u2019t worry, little one. I am only joking.  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538564904858665093, guid: ee77d2a1ce4174be2bcefcd190a9dcb2,
+        type: 3}
+      propertyPath: 'defaultLines.Array.data[2]'
+      value: 'I admire your youthful energy and excitement! Run along! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538564904858665093, guid: ee77d2a1ce4174be2bcefcd190a9dcb2,
+        type: 3}
+      propertyPath: dialogueByStage.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538564904858665093, guid: ee77d2a1ce4174be2bcefcd190a9dcb2,
+        type: 3}
+      propertyPath: dialogueByStage.Array.data[0].lines.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538564904858665093, guid: ee77d2a1ce4174be2bcefcd190a9dcb2,
+        type: 3}
+      propertyPath: dialogueByStage.Array.data[1].lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538564904858665093, guid: ee77d2a1ce4174be2bcefcd190a9dcb2,
+        type: 3}
+      propertyPath: 'dialogueByStage.Array.data[0].lines.Array.data[0]'
+      value: "The, *ahem,* the CO2 from the burning of fossil fuels has contributed
+        to the collapse of this here ecosystem, but I have been iterating on an invention
+        that I call \u201Ccarbon capture.\u201D It \u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538564904858665093, guid: ee77d2a1ce4174be2bcefcd190a9dcb2,
+        type: 3}
+      propertyPath: 'dialogueByStage.Array.data[0].lines.Array.data[1]'
+      value: "*AHEM* Am I boring you? Don\u2019t worry, little one. I am only joking.
+        \r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538564904858665093, guid: ee77d2a1ce4174be2bcefcd190a9dcb2,
+        type: 3}
+      propertyPath: 'dialogueByStage.Array.data[0].lines.Array.data[2]'
+      value: "I admire your youthful energy and excitement! Run along!\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538564904858665093, guid: ee77d2a1ce4174be2bcefcd190a9dcb2,
+        type: 3}
+      propertyPath: 'dialogueByStage.Array.data[0].lines.Array.data[3]'
+      value: "I admire your youthful energy and excitement! Run along!\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538564904858665093, guid: ee77d2a1ce4174be2bcefcd190a9dcb2,
+        type: 3}
+      propertyPath: 'dialogueByStage.Array.data[1].lines.Array.data[0]'
+      value: "The, *ahem,* the CO2 from the burning of fossil fuels has contributed
+        to the collapse of this here ecosystem, but I have been iterating on an invention
+        that I call \u201Ccarbon capture.\u201D It \u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538564904858665093, guid: ee77d2a1ce4174be2bcefcd190a9dcb2,
+        type: 3}
+      propertyPath: 'dialogueByStage.Array.data[1].lines.Array.data[1]'
+      value: "*AHEM* Am I boring you? Don\u2019t worry, little one. I am only joking.
+        \r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538564904858665093, guid: ee77d2a1ce4174be2bcefcd190a9dcb2,
+        type: 3}
+      propertyPath: 'dialogueByStage.Array.data[1].lines.Array.data[2]'
+      value: "I admire your youthful energy and excitement! Run along!\r"
+      objectReference: {fileID: 0}
     - target: {fileID: 8247548665344007260, guid: ee77d2a1ce4174be2bcefcd190a9dcb2,
         type: 3}
       propertyPath: m_Name
@@ -49459,6 +49856,7 @@ MonoBehaviour:
   targetScene: FlowerPuzzle
   spawnPointInTargetScene: FromFlowerPuzzle
   transitionDelay: 0
+  StageUnlock: 3
 --- !u!61 &1177168205
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49493,7 +49891,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 6.632065, y: -2.5177307}
+  m_Offset: {x: 6.632065, y: -5.0409584}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -49503,7 +49901,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 14.26413, y: 12.667511}
+  m_Size: {x: 14.26413, y: 17.713966}
   m_EdgeRadius: 0
 --- !u!4 &1177168206
 Transform:
@@ -55105,7 +55503,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -83.7, y: 90.6, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1633814193}
@@ -63137,9 +63535,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a56196bdb054b143b5c9bb335019b94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: PuzzleInterface
+  targetScene: VerticalPlatformer
   spawnPointInTargetScene: FromPlatformer
   transitionDelay: 0
+  StageUnlock: 4
 --- !u!61 &1514055433
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -67727,7 +68126,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -19.973894, y: 49, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1633814193}
@@ -70479,7 +70878,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 28.2, y: 76.7, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1633814193}
@@ -72077,7 +72476,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -76.299995, y: 15.8, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1633814193}
@@ -75749,6 +76148,37 @@ PrefabInstance:
       value: Sping water? *BURP* As long as you don't take any flies while you're
         at it *BURP* Fill it up here.
       objectReference: {fileID: 0}
+    - target: {fileID: -763435726220448781, guid: eeba58a70168c4b468e43063c5ae90d3,
+        type: 3}
+      propertyPath: defaultLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -763435726220448781, guid: eeba58a70168c4b468e43063c5ae90d3,
+        type: 3}
+      propertyPath: 'defaultLines.Array.data[0]'
+      value: '***BURPPPPP***'
+      objectReference: {fileID: 0}
+    - target: {fileID: -763435726220448781, guid: eeba58a70168c4b468e43063c5ae90d3,
+        type: 3}
+      propertyPath: dialogueByStage.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -763435726220448781, guid: eeba58a70168c4b468e43063c5ae90d3,
+        type: 3}
+      propertyPath: dialogueByStage.Array.data[0].stage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -763435726220448781, guid: eeba58a70168c4b468e43063c5ae90d3,
+        type: 3}
+      propertyPath: dialogueByStage.Array.data[0].lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -763435726220448781, guid: eeba58a70168c4b468e43063c5ae90d3,
+        type: 3}
+      propertyPath: 'dialogueByStage.Array.data[0].lines.Array.data[0]'
+      value: Spring Water? *BURP* You've come to the right place *BURP* Just make
+        sure you don't steal any flies...
+      objectReference: {fileID: 0}
     - target: {fileID: 6548861848852227291, guid: eeba58a70168c4b468e43063c5ae90d3,
         type: 3}
       propertyPath: m_SortingOrder
@@ -76050,7 +76480,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.3851738, y: 16.1, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1633814193}
@@ -78307,7 +78737,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 14.4, y: -9.8, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1633814193}
@@ -78758,7 +79188,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -110.1, y: 88.6, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1633814193}
@@ -79738,11 +80168,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcName: Benjamin the Bear
-  dialogue:
-  - Mmmmm honeyyyy. The bees will give you fresh honey for a pollen-rich flower!
-  - "Here \u2013 take mine. I\u2019ve gotta go into hibernation after all..."
+  dialogueByStage:
+  - stage: 4
+    lines:
+    - "Mmmmm honeyyyy. The bees will give you fresh honey for a pollen-rich flower!\r"
+    - "Here \u2013 take mine. I\u2019ve gotta go into hibernation after all"
+    objectToActivate: {fileID: 2138024659}
   npcAnimator: {fileID: 1917132803}
-  objectToActivate: {fileID: 2138024659}
+  defaultLines:
+  - Om nom nom nom I love honey
 --- !u!95 &1917132803 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 3167882864540297221, guid: 9d2fc380320268d4ab179843fc49b88b,
@@ -83111,7 +83545,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -31.4, y: -27.3, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1633814193}
@@ -84262,6 +84696,84 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2f67596ef13d4282847bc46b67d404e, type: 3}
+--- !u!1 &2025212569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2025212570}
+  - component: {fileID: 2025212571}
+  m_Layer: 0
+  m_Name: Colliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2025212570
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025212569}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -142.8, y: -124.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 319000177}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2025212571
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025212569}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 144.48465, y: 6.1625595}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 328.7901, y: 21.452927}
+  m_EdgeRadius: 0
 --- !u!1001 &2030025117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86515,6 +87027,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 319000177}
     m_Modifications:
+    - target: {fileID: -763435726220448781, guid: eeba58a70168c4b468e43063c5ae90d3,
+        type: 3}
+      propertyPath: defaultLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -763435726220448781, guid: eeba58a70168c4b468e43063c5ae90d3,
+        type: 3}
+      propertyPath: 'defaultLines.Array.data[0]'
+      value: '***BURPPP***'
+      objectReference: {fileID: 0}
     - target: {fileID: 4206178374689072035, guid: eeba58a70168c4b468e43063c5ae90d3,
         type: 3}
       propertyPath: m_Radius
@@ -87819,8 +88341,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 784912030954625356, guid: 897635d3663ffa0408ea8a47feb46dcc,
         type: 3}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 784912030954625356, guid: 897635d3663ffa0408ea8a47feb46dcc,
+        type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 784912030954625356, guid: 897635d3663ffa0408ea8a47feb46dcc,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2628892263487607573, guid: 897635d3663ffa0408ea8a47feb46dcc,
         type: 3}
@@ -87850,12 +88382,12 @@ PrefabInstance:
     - target: {fileID: 7050581779145239556, guid: 897635d3663ffa0408ea8a47feb46dcc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 159.6
+      value: 98.1
       objectReference: {fileID: 0}
     - target: {fileID: 7050581779145239556, guid: 897635d3663ffa0408ea8a47feb46dcc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -146.6
+      value: -151.3
       objectReference: {fileID: 0}
     - target: {fileID: 7050581779145239556, guid: 897635d3663ffa0408ea8a47feb46dcc,
         type: 3}

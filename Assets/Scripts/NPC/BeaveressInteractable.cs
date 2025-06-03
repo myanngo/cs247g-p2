@@ -63,10 +63,27 @@ public class BeaveressInteractable : MonoBehaviour
             lines = new List<string>
             {
                 "Thank you for your help!",
-                "Now, we’ll need water as a base for our salve. There’s a stream just East of here where my nephew has a dam…"
+                "Now, we’ll need water as a base for our salve. There’s a stream just Northeast of here where my nephew has a dam…"
             };
 
-            Globals.StoryStage = 3;
+            if (InventoryData.Instance.CountItem(ItemType.FilledBottle) > 0)
+            {
+                Globals.StoryStage = 3;
+            }
+        }
+        // FLOWER PUZZLE PHASE
+        else if (Globals.StoryStage == 3)
+        {
+            lines = new List<string>
+            {
+                "Now, we need nectar from the lily of the valley, for tranquillity -- to put the Great Tree at ease.",
+                "I've heard the pasture at the North of the forest has a few of the rare flower!"
+            };
+
+            if (InventoryData.Instance.CountItem(ItemType.LilyofValley) > 0)
+            {
+                Globals.StoryStage = 4;
+            }
         }
         // DEFAULT
         else

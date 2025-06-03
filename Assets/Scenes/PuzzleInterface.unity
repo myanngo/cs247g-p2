@@ -355,6 +355,7 @@ MonoBehaviour:
     type: 3}
   continueButtonSprite: {fileID: -760738018534492137, guid: 15ddf1f0bae7c49b884db067fb97e15a,
     type: 3}
+  bottleItem: {fileID: 11400000, guid: c6bec843b3f5d354dad14dfeb35f7007, type: 2}
 --- !u!4 &525192438
 Transform:
   m_ObjectHideFlags: 0

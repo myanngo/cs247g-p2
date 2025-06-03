@@ -39,7 +39,7 @@ public class InventoryManager : MonoBehaviour
         LoadInventoryFromData();
     }
 
-    // NEW METHOD: Load inventory from persistent data
+    // Load inventory from persistent data
     private void LoadInventoryFromData()
     {
         if (InventoryData.Instance == null) return;
@@ -54,7 +54,7 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    // NEW METHOD: Clear all items from UI
+    // Clear all items from UI
     private void ClearInventoryUI()
     {
         foreach (var slot in inventorySlots)
@@ -67,7 +67,7 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    // MODIFIED: This method now updates the UI to match InventoryData
+    // This method now updates the UI to match InventoryData
     public bool AddItem(Item item)
     {
         // First add to persistent data
@@ -80,7 +80,7 @@ public class InventoryManager : MonoBehaviour
         return AddItemToUI(item, 1);
     }
 
-    // NEW METHOD: Add item to UI only (used for loading and adding new items)
+    // Add item to UI only (used for loading and adding new items)
     private bool AddItemToUI(Item item, int countToAdd)
     {
         // Check if item already exists in UI and stack it
@@ -116,7 +116,7 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
 
-    // MODIFIED: Now accepts count parameter
+    // Now accepts count parameter
     void SpawnNewItem(Item item, InventorySlot slot, int count = 1)
     {
         GameObject newItemGo = Instantiate(inventoryItemPrefab, slot.transform);
@@ -184,7 +184,7 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    // NEW METHOD: Call this to refresh UI when items are added from other sources
+    // Call this to refresh UI when items are added from other sources
     public void RefreshInventoryUI()
     {
         LoadInventoryFromData();

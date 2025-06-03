@@ -31,6 +31,7 @@ public enum ItemType
     Flower,
     Honey,
     Bottle,
+    FilledBottle,
 }
 
 public enum ActionType
