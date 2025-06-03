@@ -36018,6 +36018,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2628892263487607573, guid: 897635d3663ffa0408ea8a47feb46dcc,
+        type: 3}
+      propertyPath: orthographic size
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5858118675207760391, guid: 897635d3663ffa0408ea8a47feb46dcc,
         type: 3}
       propertyPath: m_Name

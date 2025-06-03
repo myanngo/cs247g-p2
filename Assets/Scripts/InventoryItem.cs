@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 
-public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
 {
     [Header("UI")]
     public Image image;
@@ -14,6 +14,8 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     [HideInInspector] public Item item;
     [HideInInspector] public int count = 1;
     [HideInInspector] public Transform parentAfterDrag;
+
+    private bool isDragging = false;
 
     public void InitializeItem(Item newItem) {
         item = newItem;
@@ -27,8 +29,18 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         countText.gameObject.SetActive(textActive);
     }
 
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        // Only show details if we're not dragging
+        if (!isDragging && item != null)
+        {
+            InventoryManager.Instance.ShowItemDetails(item);
+        }
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
+        isDragging = true;
         image.raycastTarget = false;
         parentAfterDrag = transform.parent;
         transform.SetParent(transform.root);
@@ -41,6 +53,7 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        isDragging = false;
         image.raycastTarget = true;
         transform.SetParent(parentAfterDrag);
     }
