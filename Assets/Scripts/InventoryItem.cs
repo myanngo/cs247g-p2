@@ -17,13 +17,22 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     private bool isDragging = false;
 
-    public void InitializeItem(Item newItem) {
+    public void InitializeItem(Item newItem)
+    {
+        InitializeItem(newItem, 1);
+    }
+    
+    public void InitializeItem(Item newItem, int newCount)
+    {
         item = newItem;
-        image.sprite = newItem.image;
+        count = newCount;
+        image.sprite = item.image;
         RefreshCount();
     }
 
-    public void RefreshCount() {
+
+    public void RefreshCount()
+    {
         countText.text = count.ToString();
         bool textActive = count > 1;
         countText.gameObject.SetActive(textActive);

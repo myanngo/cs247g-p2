@@ -34,31 +34,81 @@ public class InventoryManager : MonoBehaviour
     {
         // Hide item details at start
         ClearItemDetails();
+        
+        // Load existing inventory data when the scene starts
+        LoadInventoryFromData();
     }
 
+    // NEW METHOD: Load inventory from persistent data
+    private void LoadInventoryFromData()
+    {
+        if (InventoryData.Instance == null) return;
+
+        // Clear existing UI items
+        ClearInventoryUI();
+
+        // Populate UI with data from InventoryData
+        foreach (var entry in InventoryData.Instance.inventory)
+        {
+            AddItemToUI(entry.item, entry.count);
+        }
+    }
+
+    // NEW METHOD: Clear all items from UI
+    private void ClearInventoryUI()
+    {
+        foreach (var slot in inventorySlots)
+        {
+            InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+            if (itemInSlot != null)
+            {
+                DestroyImmediate(itemInSlot.gameObject);
+            }
+        }
+    }
+
+    // MODIFIED: This method now updates the UI to match InventoryData
     public bool AddItem(Item item)
     {
-        // check if exists and is in stack
+        // First add to persistent data
+        if (InventoryData.Instance != null)
+        {
+            InventoryData.Instance.AddItem(item);
+        }
+
+        // Then update UI
+        return AddItemToUI(item, 1);
+    }
+
+    // NEW METHOD: Add item to UI only (used for loading and adding new items)
+    private bool AddItemToUI(Item item, int countToAdd)
+    {
+        // Check if item already exists in UI and stack it
         for (int i = 0; i < inventorySlots.Length; i++)
         {
             InventorySlot slot = inventorySlots[i];
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
             if (itemInSlot != null && itemInSlot.item == item)
             {
-                itemInSlot.count++;
-                itemInSlot.RefreshCount();
+                // Get the actual count from InventoryData
+                var dataEntry = InventoryData.Instance?.inventory.Find(entry => entry.item == item);
+                if (dataEntry != null)
+                {
+                    itemInSlot.count = dataEntry.count;
+                    itemInSlot.RefreshCount();
+                }
                 return true;
             }
         }
 
-        // if none we can just go to the empty one (lol rip performance)
+        // Find empty slot for new item
         for (int i = 0; i < inventorySlots.Length; i++)
         {
             InventorySlot slot = inventorySlots[i];
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
             if (itemInSlot == null)
             {
-                SpawnNewItem(item, slot);
+                SpawnNewItem(item, slot, countToAdd);
                 return true;
             }
         }
@@ -66,15 +116,23 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
 
-    void SpawnNewItem(Item item, InventorySlot slot)
+    // MODIFIED: Now accepts count parameter
+    void SpawnNewItem(Item item, InventorySlot slot, int count = 1)
     {
         GameObject newItemGo = Instantiate(inventoryItemPrefab, slot.transform);
         InventoryItem inventoryItem = newItemGo.GetComponent<InventoryItem>();
-        inventoryItem.InitializeItem(item);
+        inventoryItem.InitializeItem(item, count);
     }
 
     public int CountItem(ItemType type)
     {
+        // Get count from persistent data instead of UI
+        if (InventoryData.Instance != null)
+        {
+            return InventoryData.Instance.CountItem(type);
+        }
+
+        // Fallback to UI count if no persistent data
         int total = 0;
         foreach (var slot in inventorySlots)
         {
@@ -108,13 +166,12 @@ public class InventoryManager : MonoBehaviour
         itemDescriptionText.text = "";
         itemDetailImage.sprite = null;
 
-
         if (itemImageContainer != null)
         {
             itemImageContainer.SetActive(false);
         }
     }
-    
+
     public void TriggerPickupAnimation()
     {
         if (inventoryCanvasAnimator != null)
@@ -125,5 +182,11 @@ public class InventoryManager : MonoBehaviour
         {
             Debug.LogWarning("InventoryManager: inventoryCanvasAnimator is not assigned!");
         }
+    }
+
+    // NEW METHOD: Call this to refresh UI when items are added from other sources
+    public void RefreshInventoryUI()
+    {
+        LoadInventoryFromData();
     }
 }
