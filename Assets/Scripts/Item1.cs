@@ -30,11 +30,13 @@ public enum ItemType
     LilyofValley,
     Flower,
     Honey,
+    Bottle,
 }
 
 public enum ActionType
 {
     Puzzle,
-    ElixerIngredient, // final ingredients
+    ElixirIngredient, // final ingredients
     Exchange, // for the flower to the bees
+    Bottle,
 }
