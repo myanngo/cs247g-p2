@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      red-stalk_0: 1441226892605144661
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

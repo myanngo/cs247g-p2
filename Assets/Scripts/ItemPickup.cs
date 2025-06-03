@@ -6,10 +6,8 @@ public class ItemPickup : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) 
     {
-        Debug.Log("hhhh");
         if (other.CompareTag("Player"))
         {
-            Debug.Log("colliddss");
             InventoryManager inventory = FindObjectOfType<InventoryManager>();
             if (inventory != null && inventory.AddItem(itemData))
             {
