@@ -32,7 +32,7 @@ public class PuzzleManager : MonoBehaviour
     // Function to initialize the solution coordinates
     void InitializeSolutionCoordinates()
     {
-<<<<<<< HEAD
+
         solutionCoordinates[puzzlePieces[0]] = new Vector3(0.1436154f, 2.401809f, 0f);
         solutionCoordinates[puzzlePieces[1]] = new Vector3(0.7018303f, 0.9369204f, 0f);
         solutionCoordinates[puzzlePieces[2]] = new Vector3(-0.5270975f, 1.981371f, 0f);
@@ -63,40 +63,6 @@ public class PuzzleManager : MonoBehaviour
         // solutionCoordinates[puzzlePieces[11]] = new Vector3(0.2580201f, -2.245838f, 0f);
         // solutionCoordinates[puzzlePieces[12]] = new Vector3(-0.5379066f, -1.401858f, 0f);
         // solutionCoordinates[puzzlePieces[13]] = new Vector3(0.6588899f, -2.120884f, 0f);
-=======
-
-
-        solutionCoordinates[puzzlePieces[0]] = new Vector3(0.1365065f, 2.415168f, 0f);
-        solutionCoordinates[puzzlePieces[1]] = new Vector3(0.6960804f, 0.9533092f, 0f);
-        solutionCoordinates[puzzlePieces[2]] = new Vector3(-0.8231218f, -0.3432156f, 0f);
-        solutionCoordinates[puzzlePieces[3]] = new Vector3(-0.520515f, 1.940631f, 0f);
-        solutionCoordinates[puzzlePieces[4]] = new Vector3(0.1624695f, 1.717028f, 0f);
-        solutionCoordinates[puzzlePieces[5]] = new Vector3(-0.5485473f, 0.680092f, 0f);
-        solutionCoordinates[puzzlePieces[6]] = new Vector3(-0.01293063f, 0.2254836f, 0f);
-        solutionCoordinates[puzzlePieces[7]] = new Vector3(-0.7562358f, -2.315372f, 0f);
-        solutionCoordinates[puzzlePieces[8]] = new Vector3(0.1355052f, -0.9252224f, 0f);
-        solutionCoordinates[puzzlePieces[9]] = new Vector3(1.034477f, -0.3207911f, 0f);
-        solutionCoordinates[puzzlePieces[10]] = new Vector3(0.6777353f, -1.325979f, 0f);
-        solutionCoordinates[puzzlePieces[11]] = new Vector3(0.2580201f, -2.245838f, 0f);
-        solutionCoordinates[puzzlePieces[12]] = new Vector3(-0.5379066f, -1.401858f, 0f);
-        solutionCoordinates[puzzlePieces[13]] = new Vector3(0.6588899f, -2.120884f, 0f);
-
-        // Original coordinates multiplied by puzzleScale
-        // solutionCoordinates[puzzlePieces[0]] = new Vector3(-2.301475f, 1.27161f, 0) * puzzleScale;
-        // solutionCoordinates[puzzlePieces[1]] = new Vector3(-1.81313f, 0.08828181f, 0) * puzzleScale;
-        // solutionCoordinates[puzzlePieces[2]] = new Vector3(-3.066931f, -0.9741172f, 0) * puzzleScale;
-        // solutionCoordinates[puzzlePieces[3]] = new Vector3(-2.835728f, 0.9076666f, 0) * puzzleScale;
-        // solutionCoordinates[puzzlePieces[4]] = new Vector3(-2.280923f, 0.7331243f, 0) * puzzleScale;
-        // solutionCoordinates[puzzlePieces[5]] = new Vector3(-2.804205f, -0.0861606f, 0) * puzzleScale;
-        // solutionCoordinates[puzzlePieces[6]] = new Vector3(-2.410229f, -0.5065725f, 0) * puzzleScale;
-        // solutionCoordinates[puzzlePieces[7]] = new Vector3(-3.054111f, -2.672021f, 0) * puzzleScale;
-        // solutionCoordinates[puzzlePieces[8]] = new Vector3(-2.268002f, -1.493492f, 0) * puzzleScale;
-        // solutionCoordinates[puzzlePieces[9]] = new Vector3(-1.528731f, -1.013308f, 0) * puzzleScale;
-        // solutionCoordinates[puzzlePieces[10]] = new Vector3(-1.827033f, -1.868998f, 0) * puzzleScale;
-        // solutionCoordinates[puzzlePieces[11]] = new Vector3(-2.229936f, -2.601764f, 0) * puzzleScale;
-        // solutionCoordinates[puzzlePieces[12]] = new Vector3(-2.842438f, -1.884654f, 0) * puzzleScale;
-        // solutionCoordinates[puzzlePieces[13]] = new Vector3(-1.830737f, -2.561386f, 0) * puzzleScale;
->>>>>>> ec802fd48076f9eb7a06b663f4e7a493b198ecaa
     }
 
     // Function to check if the puzzle is solved
