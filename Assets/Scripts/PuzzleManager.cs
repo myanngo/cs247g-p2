@@ -302,7 +302,7 @@ public class PuzzleManager : MonoBehaviour
                 if (hit && hit.collider != null && hit.collider.gameObject.name == "ContinueButton")
                 {
                     Debug.Log("Continue button clicked!");
-                    // Add your continue logic here
+                    FadeManager.Instance.FadeToSceneWithDelay("Final_Map", 0F);
                 }
             }
             return; // Don't process other input when puzzle is solved
