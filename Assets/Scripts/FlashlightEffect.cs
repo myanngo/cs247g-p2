@@ -108,6 +108,7 @@ public class FlashlightEffect : MonoBehaviour
             if (collider != null && collider.OverlapPoint(worldPoint))
             {
                 isDarknessActive = false;
+                FadeManager.Instance.FadeToSceneWithDelay("Final_Map", 0F);
                 return;
             }
         }
