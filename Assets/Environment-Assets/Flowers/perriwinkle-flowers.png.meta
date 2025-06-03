@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      perriwinkle-flowers_0: -8710259444012546002
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
