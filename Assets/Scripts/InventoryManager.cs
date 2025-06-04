@@ -15,6 +15,7 @@ public class InventoryManager : MonoBehaviour
     public TMP_Text itemDescriptionText;
     public Image itemDetailImage;
     public GameObject itemImageContainer;
+    public TMP_Text instructionText;
     [Header("Pickup Animation")]
     public Animator inventoryCanvasAnimator; // Animator for the inventory canvas
 
@@ -152,6 +153,7 @@ public class InventoryManager : MonoBehaviour
             itemNameText.text = item.itemName;
             itemDescriptionText.text = item.description;
             itemDetailImage.sprite = item.image;
+            instructionText.text = "";
 
             if (itemImageContainer != null)
             {
@@ -165,6 +167,7 @@ public class InventoryManager : MonoBehaviour
         itemNameText.text = "";
         itemDescriptionText.text = "";
         itemDetailImage.sprite = null;
+        instructionText.text = "Click on an item to see more details.";
 
         if (itemImageContainer != null)
         {
