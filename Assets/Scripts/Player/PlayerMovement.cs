@@ -64,7 +64,8 @@ public class PlayerMovement : MonoBehaviour
         if (_usePhysicsMovement)
         {
             // Physics-based movement (affected by collisions, forces, etc.)
-            _rb.linearVelocity = _movement * _moveSpeed;
+            Vector2 newPos = _rb.position + _movement * _moveSpeed * Time.fixedDeltaTime;
+            _rb.MovePosition(newPos);
         }
         else
         {

@@ -4,16 +4,14 @@ using System.Collections.Generic;
 public class BeaveressInteractable : MonoBehaviour
 {
     [SerializeField] private string npcName;
-    [SerializeField] private float sceneTransitionDelay = 3f; // Delay before scene transition
-
-    private int dialogueStage = 0; // 0 = intro, 1 = glass shard mission, etc.
+    [SerializeField] private float sceneTransitionDelay = 3f;
 
     public void Interact()
     {
         List<string> lines = new List<string>();
 
         // INITIAL PHASE
-        if (dialogueStage == 0)
+        if (Globals.StoryStage == 0)
         {
             lines = new List<string>
             {
@@ -24,12 +22,12 @@ public class BeaveressInteractable : MonoBehaviour
                 "Thank you, sweetie. First, we'll need some kind of bottle in which to make the elixir. Come back if you need my assistance."
             };
 
-            dialogueStage = 1; // advance to next stage
+            Globals.StoryStage = 1;
         }
         // GLASS PUZZLE FINDING PHASE
-        else if (dialogueStage == 1)
+        else if (Globals.StoryStage == 1)
         {
-            if (InventoryManager.Instance.CountItem(ItemType.GlassPiece) < 14)
+            if (InventoryData.Instance.CountItem(ItemType.GlassPiece) < 14)
             {
                 lines = new List<string>
                 {
@@ -45,32 +43,49 @@ public class BeaveressInteractable : MonoBehaviour
                     "Let's see if we can piece something together with these …"
                 };
 
-                dialogueStage = 2;
+                Globals.StoryStage = 2;
 
-                // Use FadeManager for scene transition with delay
+                // Use FadeManager for scene transition
                 if (FadeManager.Instance != null)
                 {
                     FadeManager.Instance.FadeToSceneWithDelay("PuzzleInterface", sceneTransitionDelay);
                 }
                 else
                 {
-                    // Fallback if FadeManager is not available
                     Debug.LogWarning("FadeManager not found! Using direct scene load.");
                     StartCoroutine(DelayedSceneLoad("PuzzleInterface", sceneTransitionDelay));
                 }
             }
         }
-        // POST PUZZLE PHASE (GO FILL UP? OTHER INGREDIENTS?)
-        else if (dialogueStage == 2)
+        // POST PUZZLE PHASE (GO FILL UP)
+        else if (Globals.StoryStage == 2)
         {
             lines = new List<string>
             {
                 "Thank you for your help!",
-                "Now, we’ll need water as a base for our salve. There’s a stream just East of here where my nephew has a dam…",
+                "Now, we’ll need water as a base for our salve. There’s a stream just Northeast of here where my nephew has a dam…"
             };
 
-            dialogueStage = 3; // advance to next stage
+            if (InventoryData.Instance.CountItem(ItemType.FilledBottle) > 0)
+            {
+                Globals.StoryStage = 3;
+            }
         }
+        // FLOWER PUZZLE PHASE
+        else if (Globals.StoryStage == 3)
+        {
+            lines = new List<string>
+            {
+                "Now, we need nectar from the lily of the valley, for tranquillity -- to put the Great Tree at ease.",
+                "I've heard the pasture at the North of the forest has a few of the rare flower!"
+            };
+
+            if (InventoryData.Instance.CountItem(ItemType.LilyofValley) > 0)
+            {
+                Globals.StoryStage = 4;
+            }
+        }
+        // DEFAULT
         else
         {
             lines = new List<string> { "Thanks again for your help, sweetie!" };
@@ -79,7 +94,6 @@ public class BeaveressInteractable : MonoBehaviour
         DialogueManager.Instance.ShowDialogue(npcName, lines);
     }
 
-    // Fallback coroutine for delayed scene loading without fade
     private System.Collections.IEnumerator DelayedSceneLoad(string sceneName, float delay)
     {
         yield return new WaitForSeconds(delay);

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6046132095922043700}
   - component: {fileID: 6496620317152229794}
   - component: {fileID: -8640239795707855634}
+  - component: {fileID: 4320683802318563013}
   m_Layer: 0
   m_Name: big tree
   m_TagString: Untagged
@@ -135,3 +136,40 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 21.941023, y: 21.66}
   m_EdgeRadius: 0
+--- !u!70 &4320683802318563013
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2835265543780755297}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.29283905, y: 3.4263213}
+  m_Size: {x: 19.246887, y: 15.088559}
+  m_Direction: 1
