@@ -63,7 +63,7 @@ public class BeaveressInteractable : MonoBehaviour
             lines = new List<string>
             {
                 "Thank you for your help!",
-                "Now, we’ll need water as a base for our salve. There’s a stream just Northeast of here where my nephew has a dam…"
+                "Now, we’ll need water as a base for our salve. There’s a spring just Northeast of here where my croaky friend hangs out."
             };
 
             if (InventoryData.Instance.CountItem(ItemType.FilledBottle) > 0)

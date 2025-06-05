@@ -10,18 +10,11 @@ public class Spring : MonoBehaviour
     public AudioClip fillSound;
     
     [Header("Visual Effects (Optional)")]
-    public ParticleSystem fillEffect;
-    public Animator springAnimator;
+    public GameObject springAnimator;
     
-    private void OnMouseDown()
-    {
-        FillBottle();
-    }
-    
-    // Alternative method if you're using a different input system
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+        if (other.CompareTag("Player") && Globals.StoryStage == 2)
         {
             FillBottle();
         }
@@ -111,16 +104,10 @@ public class Spring : MonoBehaviour
             audioSource.PlayOneShot(fillSound);
         }
         
-        // Play particle effect
-        if (fillEffect != null)
-        {
-            fillEffect.Play();
-        }
-        
         // Play animation
         if (springAnimator != null)
         {
-            springAnimator.SetTrigger("Fill");
+            springAnimator.SetActive(true);
         }
     }
 }

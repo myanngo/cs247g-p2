@@ -63,7 +63,7 @@ public class InventoryManager : MonoBehaviour
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
             if (itemInSlot != null)
             {
-                DestroyImmediate(itemInSlot.gameObject);
+                Destroy(itemInSlot.gameObject);
             }
         }
     }

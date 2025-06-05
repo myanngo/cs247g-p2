@@ -19,4 +19,4 @@ MonoBehaviour:
   stackable: 1
   image: {fileID: -2174827668884051896, guid: debfecc6c64804e58bd9d3224e98a62d, type: 3}
   itemName: Elixir Bottle
-  description: An empty bottle... Needs the frog's pond water to activate
+  description: An empty bottle... Needs the frog's spring water to activate
