@@ -63,7 +63,7 @@ public class BeaveressInteractable : MonoBehaviour
             lines = new List<string>
             {
                 "Thank you for your help!",
-                "Now, we’ll need water as a base for our salve. There’s a spring just Northeast of here where my croaky friend hangs out."
+                "Now, we’ll need water as a base for our salve. There’s a spring just East of here where my croaky friend hangs out."
             };
 
             if (InventoryData.Instance.CountItem(ItemType.FilledBottle) > 0)
@@ -77,12 +77,39 @@ public class BeaveressInteractable : MonoBehaviour
             lines = new List<string>
             {
                 "Now, we need nectar from the lily of the valley, for tranquillity -- to put the Great Tree at ease.",
-                "I've heard the pasture at the North of the forest has a few of the rare flower!"
+                "I've heard the pasture at the Northeast of the forest has a few of the rare flower!"
             };
 
             if (InventoryData.Instance.CountItem(ItemType.LilyofValley) > 0)
             {
                 Globals.StoryStage = 4;
+            }
+        }
+        // GET HONEY PHASE
+        else if (Globals.StoryStage == 4)
+        {
+            lines = new List<string>
+            {
+                "Finally, we need to give this old tree a little something sweet and punchy — we need a bit of fresh honey, for verve! There must be someone around with a sweet tooth…"
+            };
+        }
+        // FINAL PHASE
+        else if (Globals.StoryStage == 5)
+        {
+            lines = new List<string>
+            {
+                "My goodness! You did it!",
+                "Let’s see –",
+            };
+            // Use FadeManager for scene transition
+            if (FadeManager.Instance != null)
+            {
+                FadeManager.Instance.FadeToSceneWithDelay("FinalAnimation", sceneTransitionDelay);
+            }
+            else
+            {
+                Debug.LogWarning("FadeManager not found! Using direct scene load.");
+                StartCoroutine(DelayedSceneLoad("FinalAnimation", sceneTransitionDelay));
             }
         }
         // DEFAULT

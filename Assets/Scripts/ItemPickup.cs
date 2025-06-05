@@ -39,7 +39,6 @@ public class ItemPickup : MonoBehaviour
                 {
                     Globals.collectedItemIDs.Add(itemID); // Mark as collected
                     Destroy(gameObject);
-                    // Note: No animation trigger since we're not in main scene
                 }
                 else
                 {

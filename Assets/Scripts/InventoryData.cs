@@ -29,6 +29,34 @@ public class InventoryData : MonoBehaviour
 
     public bool AddItem(Item item)
     {
+        // advance stage when get lily of the valley
+        if (item.type == ItemType.LilyofValley)
+        {
+            Globals.StoryStage = 4;
+        }
+        // advance stage when get filled bottle from frog
+        if (item.type == ItemType.FilledBottle)
+        {
+            Globals.StoryStage = 3;
+        }
+        
+        // advance stage when get flower from bear
+        if (item.type == ItemType.Flower)
+        {
+            Globals.StoryStage = 5;
+        }
+
+        // replace flower with honey
+        if (item.type == ItemType.Honey)
+        {
+            var flowerToReplace = inventory.Find(entry => entry.item.type == ItemType.Flower && entry.item.actionType == ActionType.Exchange);
+            if (flowerToReplace != null)
+            {
+                inventory.Remove(flowerToReplace); // remove flower
+                Debug.Log("Replaced Flower (Exchange) with Honey");
+            }
+        }
+
         var existing = inventory.Find(entry => entry.item == item);
         if (existing != null)
         {

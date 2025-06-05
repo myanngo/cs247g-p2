@@ -11,6 +11,9 @@ public class Spring : MonoBehaviour
     
     [Header("Visual Effects (Optional)")]
     public GameObject springAnimator;
+
+    [Header("Inventory Reward")]
+    public Item bottleItem; 
     
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -25,12 +28,17 @@ public class Spring : MonoBehaviour
         // Check if player has any empty bottles
         if (HasEmptyBottle())
         {
-            // Remove one empty bottle
-            RemoveEmptyBottle();
-            
-            // Add filled bottle
-            AddFilledBottle();
-            
+            InventoryData.Instance.inventory.RemoveAll(entry => entry.item.type == ItemType.Bottle);
+                
+            // Add one bottle
+            InventoryData.Instance.AddItem(bottleItem);
+                
+            // Update UI if InventoryManager exists
+            if (InventoryManager.Instance != null)
+            {
+                InventoryManager.Instance.RefreshInventoryUI();
+            }
+
             // Play effects
             PlayEffects();
             
