@@ -3,7 +3,7 @@ using UnityEngine;
 public class Spring : MonoBehaviour
 {
     [Header("Item Configuration")]
-    public Item filledBottleItem; // Drag your FilledBottle ScriptableObject here
+    public Item filledBottleItem;
     
     [Header("Audio (Optional)")]
     public AudioSource audioSource;

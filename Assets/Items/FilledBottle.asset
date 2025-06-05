@@ -19,4 +19,5 @@ MonoBehaviour:
   stackable: 1
   image: {fileID: 94096135752893372, guid: 6be98c56343a3164a98cff4afed89d2c, type: 3}
   itemName: Elixir Bottle
-  description: This is the bottle to hold the elixir.
+  description: Bottle filled with pond water. Collect all the ingredients to complete
+    the elixir
