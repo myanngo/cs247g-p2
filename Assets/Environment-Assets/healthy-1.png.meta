@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fc94f7d0d57671d4a8395856f8c8fbb0
+guid: ef31d46b1c4cc4e71bd799206009a80e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4671014109373471275
-    second: completed-elixir_0
+      213: 836617432874598707
+    second: healthy-1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: completed-elixir_0
+      name: healthy-1_0
       rect:
         serializedVersion: 2
-        x: 146
-        y: 29
-        width: 220
-        height: 453
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 36
+        y: 211
+        width: 3652
+        height: 3019
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b2a1b0a9596c2d040800000000000000
-      internalID: 4671014109373471275
+      spriteID: 331c3636f134c9b00800000000000000
+      internalID: 836617432874598707
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9625cb9cd44c240578bb15407a3fc9bd
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      completed-elixir_0: 4671014109373471275
+      healthy-1_0: 836617432874598707
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

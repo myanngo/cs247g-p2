@@ -78,12 +78,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -1362382943, guid: 720170905b5e8a34e8402e12338119fa, type: 3}
+  m_Sprite: {fileID: -4663019550691618801, guid: 720170905b5e8a34e8402e12338119fa,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.6328125, y: 0.8671875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -102,8 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcName: Beaveress
-  dialogue: I'll direct you to the flowers to trade for honey. BUT you have to help
-    me as well...
+  sceneTransitionDelay: 3
 --- !u!58 &3768904744421713265
 CircleCollider2D:
   m_ObjectHideFlags: 0
