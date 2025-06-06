@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fc94f7d0d57671d4a8395856f8c8fbb0
+guid: 23b24366afa7a46ca8597c4d1580affc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4671014109373471275
-    second: completed-elixir_0
+      213: -1458277285622558400
+    second: sick_great_tree_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: completed-elixir_0
+      name: sick_great_tree_0
       rect:
         serializedVersion: 2
-        x: 146
-        y: 29
-        width: 220
-        height: 453
+        x: 0
+        y: 0
+        width: 3440
+        height: 1442
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b2a1b0a9596c2d040800000000000000
-      internalID: 4671014109373471275
+      spriteID: 0415276f88823cbe0800000000000000
+      internalID: -1458277285622558400
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      completed-elixir_0: 4671014109373471275
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
