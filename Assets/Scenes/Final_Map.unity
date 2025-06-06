@@ -11548,6 +11548,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 651724418481202176, guid: 228b7c236ed5e3d478660927dc0582c8,
         type: 3}
+      propertyPath: npcName
+      value: Bonnie the Beaveress
+      objectReference: {fileID: 0}
+    - target: {fileID: 651724418481202176, guid: 228b7c236ed5e3d478660927dc0582c8,
+        type: 3}
       propertyPath: sceneTransitionDelay
       value: 2
       objectReference: {fileID: 0}
@@ -13266,40 +13271,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 319000177}
     m_Modifications:
-    - target: {fileID: 1903022268301978057, guid: c2f67596ef13d4282847bc46b67d404e,
-        type: 3}
-      propertyPath: m_FlipX
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1903022268301978057, guid: c2f67596ef13d4282847bc46b67d404e,
-        type: 3}
-      propertyPath: m_FlipY
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1903022268301978057, guid: c2f67596ef13d4282847bc46b67d404e,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3146996415551107595, guid: c2f67596ef13d4282847bc46b67d404e,
         type: 3}
       propertyPath: m_Name
       value: flowerstalks (24)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3545628567256822361, guid: c2f67596ef13d4282847bc46b67d404e,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.7468362
-      objectReference: {fileID: 0}
-    - target: {fileID: 3545628567256822361, guid: c2f67596ef13d4282847bc46b67d404e,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.7468362
-      objectReference: {fileID: 0}
-    - target: {fileID: 3545628567256822361, guid: c2f67596ef13d4282847bc46b67d404e,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.7468362
       objectReference: {fileID: 0}
     - target: {fileID: 3545628567256822361, guid: c2f67596ef13d4282847bc46b67d404e,
         type: 3}
@@ -27665,6 +27640,7 @@ GameObject:
   - component: {fileID: 572577605}
   - component: {fileID: 572577607}
   - component: {fileID: 572577608}
+  - component: {fileID: 572577609}
   m_Layer: 0
   m_Name: spring_0
   m_TagString: Untagged
@@ -27795,7 +27771,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -27933,6 +27909,52 @@ MonoBehaviour:
   minDistance: 0
   maxDistance: 100
   player: {fileID: 0}
+--- !u!61 &572577609
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572577600}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -3.9212222}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 41.323177, y: 23.1}
+    newSize: {x: 41.323177, y: 23.1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 41.323177, y: 15.732833}
+  m_EdgeRadius: 0
 --- !u!1001 &573685509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49623,6 +49645,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
         type: 3}
+      propertyPath: npcName
+      value: Simone Ze Swan
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343334088818488107, guid: 0139df50e1ae540c38763f9c0f7cace5,
+        type: 3}
       propertyPath: dialogue.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -53694,6 +53721,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538564904858665093, guid: ee77d2a1ce4174be2bcefcd190a9dcb2,
+        type: 3}
+      propertyPath: npcName
+      value: Oliver the Owl
       objectReference: {fileID: 0}
     - target: {fileID: 4538564904858665093, guid: ee77d2a1ce4174be2bcefcd190a9dcb2,
         type: 3}
@@ -86875,6 +86907,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 319000177}
     m_Modifications:
+    - target: {fileID: -763435726220448781, guid: eeba58a70168c4b468e43063c5ae90d3,
+        type: 3}
+      propertyPath: npcName
+      value: Frank the Frog
+      objectReference: {fileID: 0}
     - target: {fileID: -763435726220448781, guid: eeba58a70168c4b468e43063c5ae90d3,
         type: 3}
       propertyPath: dialogue.Array.size
