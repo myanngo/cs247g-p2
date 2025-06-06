@@ -5,7 +5,7 @@ public class FlashlightEffect : MonoBehaviour
     [SerializeField] private Material flashlightMaterial;
     [SerializeField] private float flashlightSize = 2f;
     [SerializeField] [Range(0f, 1f)] private float darkness = 0.85f;
-    [SerializeField] private GameObject lilyOfValley; // Reference to the specific lily-of-the-valley object
+    [SerializeField] private GameObject lilyOfValley;
 
     private Camera mainCamera;
     private static readonly int MousePosID = Shader.PropertyToID("_MousePosition");
@@ -83,7 +83,9 @@ public class FlashlightEffect : MonoBehaviour
         if (!isDarknessActive)
         {
             if (quad.activeSelf)
+            {
                 quad.SetActive(false);
+            }
             return;
         }
 
