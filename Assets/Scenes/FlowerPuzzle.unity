@@ -13292,6 +13292,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb86976bc4ef4d8d90e5de6c0eea14c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  completionSound: {fileID: 8300000, guid: e2ca45a1c94104462aa10d1f30d0b373, type: 3}
+  completionVolume: 1.5
   flashlightMaterial: {fileID: 2100000, guid: 6f813d8d40abc40728948e4bf93e5045, type: 2}
   flashlightSize: 15
   darkness: 1
