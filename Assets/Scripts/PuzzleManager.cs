@@ -13,6 +13,10 @@ public class PuzzleManager : MonoBehaviour
     public Sprite[] glassSprites; // Array to hold the sprites from the "glass" set
     public Sprite solvedSprite; // Sprite to show when the puzzle is solved
     public Sprite continueButtonSprite; // Sprite for the continue button
+    
+    [Header("Inventory Reward")]
+    public Item bottleItem; 
+    
     private float puzzleScale = 1.2f; // Shared scale for both pieces and silhouette
     private List<GameObject> puzzlePieces = new List<GameObject>();
     private GameObject draggingPiece = null;
@@ -90,10 +94,57 @@ public class PuzzleManager : MonoBehaviour
         return true; // Puzzle is solved
     }
 
+    // Function to replace GlassPiece items with Bottle in inventory
+    void ReplaceGlassPiecesWithBottle()
+    {
+        if (bottleItem == null)
+        {
+            Debug.LogError("PuzzleManager: Bottle item is not assigned!");
+            return;
+        }
+
+        if (InventoryData.Instance != null)
+        {
+            // Count how many glass pieces we have
+            int glassPieceCount = InventoryData.Instance.CountItem(ItemType.GlassPiece);
+            
+            if (glassPieceCount > 0)
+            {
+                Debug.Log($"Replacing {glassPieceCount} glass pieces with 1 bottle");
+                
+                // Remove all glass pieces
+                InventoryData.Instance.inventory.RemoveAll(entry => entry.item.type == ItemType.GlassPiece);
+                
+                // Add one bottle
+                InventoryData.Instance.AddItem(bottleItem);
+                
+                // Update UI if InventoryManager exists
+                if (InventoryManager.Instance != null)
+                {
+                    InventoryManager.Instance.RefreshInventoryUI();
+                }
+                
+                Debug.Log("Successfully replaced glass pieces with bottle!");
+            }
+            else
+            {
+                Debug.Log("No glass pieces found in inventory to replace");
+            }
+        }
+        else
+        {
+            Debug.LogError("InventoryData.Instance is null!");
+        }
+    }
+
     // Function to show the completed puzzle
     void ShowCompletedPuzzle()
     {
         Debug.Log("Showing completed puzzle!");
+        
+        // Replace glass pieces with bottle in inventory
+        ReplaceGlassPiecesWithBottle();
+        
         // Deactivate all puzzle pieces
         Vector3 newPos = solveArea.position;
         foreach (GameObject piece in puzzlePieces)
