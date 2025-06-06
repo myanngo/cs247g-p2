@@ -15,7 +15,7 @@ public class PuzzleManager : MonoBehaviour
     public Sprite continueButtonSprite; // Sprite for the continue button
     
     [Header("Inventory Reward")]
-    public Item bottleItem; // Drag your Bottle ScriptableObject here
+    public Item bottleItem; 
     
     private float puzzleScale = 1.2f; // Shared scale for both pieces and silhouette
     private List<GameObject> puzzlePieces = new List<GameObject>();

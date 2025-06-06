@@ -10,18 +10,14 @@ public class Spring : MonoBehaviour
     public AudioClip fillSound;
     
     [Header("Visual Effects (Optional)")]
-    public ParticleSystem fillEffect;
-    public Animator springAnimator;
+    public GameObject springAnimator;
+
+    [Header("Inventory Reward")]
+    public Item bottleItem; 
     
-    private void OnMouseDown()
-    {
-        FillBottle();
-    }
-    
-    // Alternative method if you're using a different input system
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+        if (other.CompareTag("Player") && Globals.StoryStage == 2)
         {
             FillBottle();
         }
@@ -32,12 +28,17 @@ public class Spring : MonoBehaviour
         // Check if player has any empty bottles
         if (HasEmptyBottle())
         {
-            // Remove one empty bottle
-            RemoveEmptyBottle();
-            
-            // Add filled bottle
-            AddFilledBottle();
-            
+            InventoryData.Instance.inventory.RemoveAll(entry => entry.item.type == ItemType.Bottle);
+                
+            // Add one bottle
+            InventoryData.Instance.AddItem(bottleItem);
+                
+            // Update UI if InventoryManager exists
+            if (InventoryManager.Instance != null)
+            {
+                InventoryManager.Instance.RefreshInventoryUI();
+            }
+
             // Play effects
             PlayEffects();
             
@@ -111,16 +112,10 @@ public class Spring : MonoBehaviour
             audioSource.PlayOneShot(fillSound);
         }
         
-        // Play particle effect
-        if (fillEffect != null)
-        {
-            fillEffect.Play();
-        }
-        
         // Play animation
         if (springAnimator != null)
         {
-            springAnimator.SetTrigger("Fill");
+            springAnimator.SetActive(true);
         }
     }
 }
