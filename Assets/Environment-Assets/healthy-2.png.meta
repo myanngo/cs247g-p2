@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 23b24366afa7a46ca8597c4d1580affc
+guid: 28e40c88572694b17895056dd3484247
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1458277285622558400
-    second: sick_great_tree_0
+      213: -4230289954403313384
+    second: healthy-2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sick_great_tree_0
+      name: healthy-2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 3440
-        height: 1442
+        x: 36
+        y: 211
+        width: 3836
+        height: 2937
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0415276f88823cbe0800000000000000
-      internalID: -1458277285622558400
+      spriteID: 81913e213bdfa45c0800000000000000
+      internalID: -4230289954403313384
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: bf0415b5cd28141d2b76c77c6f46d263
+    spriteID: 1783956c2eb324092a6ef7d93e3a6e0f
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sick_great_tree_0: -1458277285622558400
+      healthy-2_0: -4230289954403313384
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
