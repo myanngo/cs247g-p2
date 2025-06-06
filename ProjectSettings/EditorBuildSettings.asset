@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FlowerPuzzle.unity
     guid: 12eb395df35a04ef4b3e1acb244221d0
+  - enabled: 1
+    path: Assets/Scenes/FinalAnimation.unity
+    guid: ac4fb06dc91a3412187a9a4a558b1b51
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
