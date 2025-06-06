@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      completed-elixir_0: 4671014109373471275
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

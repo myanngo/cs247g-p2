@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fillup_bottle_0: -4642966184311313855
+      fillup_bottle_1: -3253522007818696542
+      fillup_bottle_2: -6975304759226601669
+      fillup_bottle_3: 7812298401452583559
+      fillup_bottle_4: -4703023158889565831
+      fillup_bottle_5: 3004915511156870808
+      fillup_bottle_6: 4918922311025906134
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
