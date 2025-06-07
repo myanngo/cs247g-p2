@@ -13,7 +13,7 @@ public class BeaveressInteractable : MonoBehaviour
         List<string> lines = new List<string>();
 
         // INITIAL PHASE
-        if (Globals.StoryStage == 8)
+        if (Globals.StoryStage == 0)
         {
             lines = new List<string>
             {
@@ -98,7 +98,7 @@ public class BeaveressInteractable : MonoBehaviour
             };
         }
         // FINAL PHASE
-        else if (Globals.StoryStage == 0)
+        else if (Globals.StoryStage == 5)
         {
             lines = new List<string>
             {
