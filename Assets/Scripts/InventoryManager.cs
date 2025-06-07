@@ -5,6 +5,11 @@ using System.Collections.Generic;
 
 public class InventoryManager : MonoBehaviour
 {
+    [Header("Audio")]
+    public AudioClip pickupSound;
+    public float pickupVolume = 0.8f;
+    private AudioSource audioSource;
+
     public static InventoryManager Instance; // Singleton instance
 
     public InventorySlot[] inventorySlots;
@@ -29,6 +34,14 @@ public class InventoryManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        // Add AudioSource component
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null) 
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+        audioSource.playOnAwake = false;
     }
 
     private void Start()
@@ -75,6 +88,11 @@ public class InventoryManager : MonoBehaviour
         if (InventoryData.Instance != null)
         {
             InventoryData.Instance.AddItem(item);
+        }
+
+        if (pickupSound != null && audioSource != null) 
+        {
+            audioSource.PlayOneShot(pickupSound, pickupVolume);
         }
 
         // Then update UI

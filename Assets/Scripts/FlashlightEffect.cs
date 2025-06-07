@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class FlashlightEffect : MonoBehaviour
 {
+    [Header("Audio")]
+    public AudioClip completionSound;
+    public float completionVolume = 0.8f;
+    private AudioSource audioSource;
+
     [SerializeField] private Material flashlightMaterial;
     [SerializeField] private float flashlightSize = 2f;
     [SerializeField] [Range(0f, 1f)] private float darkness = 0.85f;
@@ -29,6 +34,14 @@ public class FlashlightEffect : MonoBehaviour
             Debug.LogWarning("Camera should be orthographic for best results!");
         }
 
+        // Add AudioSource component
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null) 
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+        audioSource.playOnAwake = false;
+
         if (lilyOfValley != null)
         {
             // Add collider to lily-of-the-valley if it doesn't have one
@@ -42,6 +55,8 @@ public class FlashlightEffect : MonoBehaviour
         {
             Debug.LogWarning("Lily of the Valley not assigned!");
         }
+
+        
         
         CreateOverlay();
     }
@@ -109,8 +124,21 @@ public class FlashlightEffect : MonoBehaviour
             Collider2D collider = lilyOfValley.GetComponent<Collider2D>();
             if (collider != null && collider.OverlapPoint(worldPoint))
             {
+                if (completionSound != null && audioSource != null) 
+                {
+                    audioSource.PlayOneShot(completionSound, completionVolume);
+                }
+
                 isDarknessActive = false;
-                FadeManager.Instance.FadeToSceneWithDelay("Final_Map", 0F);
+
+                if (FadeManager.Instance != null)
+                {
+                    FadeManager.Instance.FadeToSceneWithDelay("Final_Map", 0F);
+                }
+                else
+                {
+                    Debug.LogWarning("FadeManager.Instance is null!");
+                }
                 return;
             }
         }

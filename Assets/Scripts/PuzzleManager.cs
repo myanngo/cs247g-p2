@@ -5,6 +5,13 @@ using UnityEngine.UI;
 
 public class PuzzleManager : MonoBehaviour
 {
+
+    [Header("Audio")]
+    public AudioClip completionSound;
+    public float completionVolume = 0.8f;
+    private AudioSource audioSource;
+
+
     public GameObject puzzlePiecePrefab;
     public Transform solveArea;
     public Transform scatterRegion; // Region where pieces will be scattered
@@ -26,6 +33,13 @@ public class PuzzleManager : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null) 
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+        audioSource.playOnAwake = false;
+        
         CreateSilhouette();
         CreatePuzzle();
         done = false;
@@ -141,10 +155,21 @@ public class PuzzleManager : MonoBehaviour
     void ShowCompletedPuzzle()
     {
         Debug.Log("Showing completed puzzle!");
+
+         if (completionSound != null && audioSource != null) 
+    {
+        audioSource.PlayOneShot(completionSound, completionVolume);
+        Debug.Log("Playing completion sound!");
+    }
         
-        // Replace glass pieces with bottle in inventory
+    if (InventoryData.Instance != null)
+    {
         ReplaceGlassPiecesWithBottle();
-        
+    }
+    else
+    {
+        Debug.LogWarning("InventoryData.Instance is null - skipping inventory replacement");
+    }
         // Deactivate all puzzle pieces
         Vector3 newPos = solveArea.position;
         foreach (GameObject piece in puzzlePieces)
