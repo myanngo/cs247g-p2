@@ -7,7 +7,7 @@ public class PlayerInteract : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E)) {
+        if (Input.GetKeyDown(KeyCode.Space)) {
             // Check if dialogue is already active
             if (DialogueManager.Instance != null && DialogueManager.Instance.IsDialogueActive)
             {
