@@ -1,17 +1,19 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class BeaveressInteractable : MonoBehaviour
 {
     [SerializeField] private string npcName;
     [SerializeField] private float sceneTransitionDelay = 3f;
+    [SerializeField] private GameObject mixAnim;
 
     public void Interact()
     {
         List<string> lines = new List<string>();
 
         // INITIAL PHASE
-        if (Globals.StoryStage == 0)
+        if (Globals.StoryStage == 8)
         {
             lines = new List<string>
             {
@@ -19,7 +21,10 @@ public class BeaveressInteractable : MonoBehaviour
                 "The Great Tree, which is home to many of the forest's creatures, is sick!",
                 "All the pollutants have infected its roots and are spreading up its trunk.",
                 "Luckily, I think I know a salve that will do the trick. But, I need your help collecting the materials. Would you help me and the forest?",
-                "Thank you, sweetie. First, we'll need some kind of bottle in which to make the elixir. Come back if you need my assistance."
+                "Thank you, sweetie. First, we'll need some kind of bottle in which to make the elixir.",
+                "The forest floor is covered with littered glass. We might as well make the best of a bad situation and piece some together to make a bottle for our salve.",
+                "Go collect all of the glass you can find on the forest floor — there should be 14 shards!",
+                "Come back if you need my assistance."
             };
 
             Globals.StoryStage = 1;
@@ -31,7 +36,6 @@ public class BeaveressInteractable : MonoBehaviour
             {
                 lines = new List<string>
                 {
-                    "The forest floor is covered with littered glass. We might as well make the best of a bad situation and piece some together to make a bottle for our salve.",
                     "Go collect all of the glass you can find on the forest floor — there should be 14 shards!"
                 };
             }
@@ -62,8 +66,8 @@ public class BeaveressInteractable : MonoBehaviour
         {
             lines = new List<string>
             {
-                "Thank you for your help!",
-                "Now, we’ll need water as a base for our salve. There’s a spring just East of here where my croaky friend hangs out."
+                "Wahoo! Way to go pumpkin!",
+                "Now, we’ll need water as a base for our salve. There’s a spring just East of here where my slightly ill-mannered friends hangs out."
             };
 
             if (InventoryData.Instance.CountItem(ItemType.FilledBottle) > 0)
@@ -94,23 +98,14 @@ public class BeaveressInteractable : MonoBehaviour
             };
         }
         // FINAL PHASE
-        else if (Globals.StoryStage == 5)
+        else if (Globals.StoryStage == 0)
         {
             lines = new List<string>
             {
                 "My goodness! You did it!",
                 "Let’s see –",
             };
-            // Use FadeManager for scene transition
-            if (FadeManager.Instance != null)
-            {
-                FadeManager.Instance.FadeToSceneWithDelay("FinalAnimation", sceneTransitionDelay);
-            }
-            else
-            {
-                Debug.LogWarning("FadeManager not found! Using direct scene load.");
-                StartCoroutine(DelayedSceneLoad("FinalAnimation", sceneTransitionDelay));
-            }
+            StartCoroutine(PlayMixAnimationAndTransition(sceneTransitionDelay));
         }
         // DEFAULT
         else
@@ -125,5 +120,23 @@ public class BeaveressInteractable : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+    }
+
+    private IEnumerator PlayMixAnimationAndTransition(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        mixAnim.SetActive(true);
+        Animator animator = mixAnim.GetComponent<Animator>();
+        yield return new WaitForSeconds(delay + 3f);
+
+        if (FadeManager.Instance != null)
+        {
+            FadeManager.Instance.FadeToScene("FinalAnimation");
+        }
+        else
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("FinalAnimation");
+        }
     }
 }
