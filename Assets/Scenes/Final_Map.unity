@@ -5255,6 +5255,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc4dd05b00170a846996fb73cddba322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSound: {fileID: 8300000, guid: bf527d825758e5b4ca7b69f5a02d9a56, type: 3}
+  pickupVolume: 1
   inventorySlots:
   - {fileID: 4100939}
   - {fileID: 2128072546}
